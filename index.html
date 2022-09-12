@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Slides</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+	<script>
+		let slide = 0
+		setTimeout(() => {
+			$('.slide').eq(slide).show()
+		}, 1000);
+		function next(){
+			slide++
+			$('.slide').hide()
+			$('.slide').eq(slide).show()
+		}
+		function finish(){
+			window.location = 'https://google.com.br'
+		}
+	</script>
+	<style>
+		body{
+			margin: 0 !important;
+			border: 0 !important;
+			padding: 0 !important;
+			background-color: #F5F5F5;
+			text-align: center;
+		}
+		.container{
+			margin-top: 50px;
+		}
+		.slide{
+			background-color: #fff;
+			display: none;
+			padding: 70px;
+			border: 2px solid #ccc;
+			border-radius: 10px;
+			text-align: center;
+		}
+		button{
+			margin-top: 30px;
+			width: 200px;
+		}
+		.header{
+			background-color: #000;
+			margin: 0;
+			color: #fff;
+			padding: 10px;
+		}
+		footer{
+			margin-top: 50px;
+			text-align: center !important;
+			font-size: 10px;
+		}
+		@media only screen and (max-width: 600px) {
+			.container{
+				margin-top: 10px;
+			}
+			.slide{
+				background-color: #fff;
+				display: none;
+				padding: 20px;
+				border: 2px solid #ccc;
+				border-radius: 10px;
+				text-align: center;
+			}
+			button{
+				margin-top: 10px;
+				width: 200px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h4>Esse método servirá para você?</h4>
+		<p>Responda o teste abaixo e descubra.</p>
+	</div>
+	<div class="container">
+		<div class="slide">
+			<h1>Você está em um relacionamento?</h1>
+			<button class="btn btn-primary btn-lg" onclick="next()">SIM</button>
+			<button class="btn btn-primary btn-lg" onclick="next()">NÃO</button>
+		</div>
+		<div class="slide">
+			<h1>Você tem a mente aberta para novas descobertas no campo da psicologia e do comportamento humano?</h1>
+			<button class="btn btn-primary btn-lg" onclick="next()">SIM</button>
+			<button class="btn btn-primary btn-lg" onclick="next()">NÃO</button>
+		</div>
+		<div class="slide">
+			<h1>O vídeo de apresentação a seguir tem um limite de mulheres que podem assistir ao mesmo tempo. Você pretende assistir até o final?</h1>
+			<button class="btn btn-primary btn-lg" onclick="next()">SIM</button>
+			<button class="btn btn-primary btn-lg" onclick="next()">NÃO</button>
+		</div>
+		<div class="slide">
+			<h5>Parabéns! Antes que você assista a apresentação onde é compartilhado o método "A Chave Secreta da Sedução" de Ricardo Vilas Boas, nós simplesmente pedimos que cada pessoa aceite nossos 3 termos de uso.</h5>
+			<br />
+			<h5>Por favor compartilhe essa apresentação com qualquer AMIGA que queira se dar melhor com os homens.</h5>
+			<ul style="list-style-type: decimal;text-align: left;margin-top: 20px;">
+				<li>Não use esse método para brincar com os sentimentos de homens. Apenas use o método com homens solteiros, e que você deseja muito ter um relacionamento.</li>
+				<li>Essa apresentação irá ficar disponível por tempo limitado, e nosso servidor permite apenas 100 pessoas por vez. Se você não deseja usar a sua vaga , por favor feche o navegador AGORA mesmo. Assim outra mulher na lista de espera pode aproveitar esta oportunidade.</li>
+				<li>Se você concorda com todos termos acima, clique no botão "Eu concordo" para poder assistir a esta apresentação privada.</li>
+			</ul>
+			<button class="btn btn-success btn-lg" onclick="finish()"	> Eu concordo &raquo;</button>
+		</div>
+		<footer>Este site não faz parte do Facebook ou a qualquer entidade do Facebook. Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site. Realizamos todos os esforços para indicar claramente e mostrar todas as provas do produto e usamos resultados reais. Nós não vendemos o seu e-mail ou qualquer informação para terceiros. Jamais realizamos nenhum tipo de spam. Se você tiver alguma dúvida, sinta-se à vontade para usar o link de contato e falar conosco em horário comercial de Segunda a Sextas das 09h00 ás 18h00. Lemos e respondemos todas as mensagens por ordem de chegada..</footer>
+	</div>
+</body>
+</html>
