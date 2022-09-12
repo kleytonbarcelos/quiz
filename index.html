@@ -6,21 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Slides</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-	<script>
-		let slide = 0
-		setTimeout(() => {
-			$('.slide').eq(slide).show()
-		}, 1000);
-		function next(){
-			slide++
-			$('.slide').hide()
-			$('.slide').eq(slide).show()
-		}
-		function finish(){
-			window.location = 'https://google.com.br'
-		}
-	</script>
 	<style>
 		body{
 			margin: 0 !important;
@@ -30,7 +15,9 @@
 			text-align: center;
 		}
 		.container{
+			margin: auto;
 			margin-top: 50px;
+			max-width: 900px;
 		}
 		.slide{
 			background-color: #fff;
@@ -54,6 +41,11 @@
 			margin-top: 50px;
 			text-align: center !important;
 			font-size: 10px;
+		}
+		footer a{
+			text-decoration: none;
+			text-transform: uppercase;
+			font-weight: bold;
 		}
 		@media only screen and (max-width: 600px) {
 			.container{
@@ -81,22 +73,22 @@
 	</div>
 	<div class="container">
 		<div class="slide">
-			<h1>Você está em um relacionamento?</h1>
+			<h3>Você está em um relacionamento?</h3>
 			<button class="btn btn-primary btn-lg" onclick="next()">SIM</button>
 			<button class="btn btn-primary btn-lg" onclick="next()">NÃO</button>
 		</div>
-		<div class="slide">
-			<h1>Você tem a mente aberta para novas descobertas no campo da psicologia e do comportamento humano?</h1>
+		<div class="slide hide">
+			<h3>Você tem a mente aberta para novas descobertas no campo da psicologia e do comportamento humano?</h3>
 			<button class="btn btn-primary btn-lg" onclick="next()">SIM</button>
 			<button class="btn btn-primary btn-lg" onclick="next()">NÃO</button>
 		</div>
-		<div class="slide">
-			<h1>O vídeo de apresentação a seguir tem um limite de mulheres que podem assistir ao mesmo tempo. Você pretende assistir até o final?</h1>
+		<div class="slide hide">
+			<h3>O vídeo de apresentação a seguir tem um limite de mulheres que podem assistir ao mesmo tempo. Você pretende assistir até o final?</h3>
 			<button class="btn btn-primary btn-lg" onclick="next()">SIM</button>
 			<button class="btn btn-primary btn-lg" onclick="next()">NÃO</button>
 		</div>
-		<div class="slide">
-			<h5>Parabéns! Antes que você assista a apresentação onde é compartilhado o método "A Chave Secreta da Sedução" de Ricardo Vilas Boas, nós simplesmente pedimos que cada pessoa aceite nossos 3 termos de uso.</h5>
+		<div class="slide hide">
+			<h5>Parabéns! Antes que você assista a apresentação onde é compartilhado o método "a Chave Secreta da Sedução" de Ricardo Vilas Boas, nós simplesmente pedimos que cada pessoa aceite nossos 3 termos de uso.</h5>
 			<br />
 			<h5>Por favor compartilhe essa apresentação com qualquer AMIGA que queira se dar melhor com os homens.</h5>
 			<ul style="list-style-type: decimal;text-align: left;margin-top: 20px;">
@@ -104,9 +96,14 @@
 				<li>Essa apresentação irá ficar disponível por tempo limitado, e nosso servidor permite apenas 100 pessoas por vez. Se você não deseja usar a sua vaga , por favor feche o navegador AGORA mesmo. Assim outra mulher na lista de espera pode aproveitar esta oportunidade.</li>
 				<li>Se você concorda com todos termos acima, clique no botão "Eu concordo" para poder assistir a esta apresentação privada.</li>
 			</ul>
-			<button class="btn btn-success btn-lg" onclick="finish()"	> Eu concordo &raquo;</button>
+			<div class="btn btn-success btn-lg"> Eu concordo &raquo;</div>
 		</div>
-		<footer>Este site não faz parte do Facebook ou a qualquer entidade do Facebook. Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site. Realizamos todos os esforços para indicar claramente e mostrar todas as provas do produto e usamos resultados reais. Nós não vendemos o seu e-mail ou qualquer informação para terceiros. Jamais realizamos nenhum tipo de spam. Se você tiver alguma dúvida, sinta-se à vontade para usar o link de contato e falar conosco em horário comercial de Segunda a Sextas das 09h00 ás 18h00. Lemos e respondemos todas as mensagens por ordem de chegada..</footer>
+		<footer>
+			<div><a target="_blank" href="./politica-de-privacidade.html">Política de Privacidade</a>&nbsp;&nbsp;<a target="_blank" href="./termos-de-uso.html">Termos de uso</a></div>
+			<small>Este site não faz parte do Facebook ou a qualquer entidade do Facebook. Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site. Realizamos todos os esforços para indicar claramente e mostrar todas as provas do produto e usamos resultados reais. Nós não vendemos o seu e-mail ou qualquer informação para terceiros. Jamais realizamos nenhum tipo de spam. Se você tiver alguma dúvida, sinta-se à vontade para usar o link de contato e falar conosco em horário comercial de Segunda a Sextas das 09h00 ás 18h00. Lemos e respondemos todas as mensagens por ordem de chegada.</small>
+		</footer>
 	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="./script.min.js"></script>
 </html>
