@@ -7,6 +7,6 @@ function next(){
     slide++
     $('.slide').eq(slide).show()
 }
-$(".btn-success" ).on("click", function() {
-    window.location = 'https://google.com.br'
+$(".concordo" ).on("click", function() {
+    window.location = '/vsl/index.php'
 });
